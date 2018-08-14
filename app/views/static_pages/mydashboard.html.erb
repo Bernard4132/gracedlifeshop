@@ -1,0 +1,52 @@
+<style type="text/css">
+
+.constyle{
+	padding: 7px; 
+	border-radius: 5px; 
+	background-color: #ffffff; 
+	border: 1px solid #d9d9d9; 
+	margin: 10px;
+	
+}
+
+</style>
+
+<body style="background-color: #e3e4e5;">
+<br>
+<div class="container">
+	<div class="row" style="margin-top: 100px; margin-bottom: 40px;">
+		<div class="col-lg-12">
+			<p style="text-align: center; font-weight: 300;">Hello Admin, you are welcome to your dashboard. Manage your Products, Customers, Categories and Buyer requests from here.</p>
+			<p style="text-align: center;">
+				<a href="/events/new" class="btn btn-success">Create a new Product</a>
+				<a href="/podcasts/new" class="btn btn-success">Manage all users</a>
+				<a href="/vlogs/new" class="btn btn-success">Create a product category</a>
+				<a href="/blogs/new" class="btn btn-success">Manage buyer requests</a>
+			</p>
+			<hr>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4 col-md-12">
+			<h5>Top Products</h5>
+			<div class="row">
+			<%= render @allposters %>
+		</div>
+		</div>
+		<div class="col-lg-4 col-md-12">
+			<h5>Top Customers</h5>
+			
+		</div>
+
+		<div class="col-lg-4 col-md-12">
+			<h5>Top Categories</h5>
+			
+		</div>
+	</div>
+</div>
+<hr>
+<br><br>
+
+</body>

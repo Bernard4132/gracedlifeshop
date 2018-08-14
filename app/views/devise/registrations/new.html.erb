@@ -1,0 +1,76 @@
+
+
+<style type="text/css">
+  .orderbtn{
+    background-color: #c20c4d;
+    border: 1px solid #c20c4d;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  .orderbtn:hover{
+    background-color: #c20c4d;
+    border: 1px solid #c20c4d;
+    border-radius: 0px;
+    color: #fff;
+  }
+
+  .orderbtn:active{
+    background-color: #c20c4d;
+    border: 1px solid #c20c4d;
+    border-radius: 0px;
+    color: #fff;
+  }
+</style>
+
+
+<div class="container">
+  <div class="row justify-content-md-center" style="margin-top: 100px; margin-bottom: 40px;">
+    <div class="col-sm-12 col-md-6 col-md-offset-3">
+<h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #c20c4d;">Customer Sign Up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= devise_error_messages! %>
+
+
+    <div class="form-group">
+      <label>Your name</label>
+      <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Name", :required => "true" %>
+     </div>
+    
+
+<div class="form-group" style="margin-top: 18px;">
+    <label for="exampleInputEmail1">Email address</label>
+    <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Enter email", :required => "true" %>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+      <label>Your Phone number</label>
+      <%= f.text_field :phonenumber, autofocus: true, :class => "form-control", :placeholder => "Phone Number", :required => "true" %>
+     </div>
+ 
+  <div class="form-group">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password"  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Password confirmation"  %>
+  </div>
+<br>
+  <p style="text-align: right;"><button type="submit" class="btn btn-success orderbtn">Create Customer Accout</button></p>
+
+<% end %>
+
+  </div>
+</div>
+</div>
+
+
+
+

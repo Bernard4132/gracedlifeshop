@@ -1,0 +1,50 @@
+<br><br><br>
+
+<p id="notice"><%= notice %></p>
+<h1>Product details</h1>
+<p>
+  <strong>Title:</strong>
+  <%= @poster.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poster.description %>
+</p>
+
+<p>
+  <strong>Posterimage:</strong>
+  <%= @poster.posterimage %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poster.price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @poster.categories.first.title %>
+</p>
+<h2>Product Requests</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phonenumber</th>
+      <th>Paymentmethod</th>
+      <th>Deliverydet</th>
+      <th>Poster</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<%= render @poster.requests %>
+</tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_poster_path(@poster) %> |
+<%= link_to 'Back', posters_path %>

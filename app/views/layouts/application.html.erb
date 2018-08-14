@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Graced Life Shop</title>
+    <%= csrf_meta_tags %>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   <%= javascript_include_tag 'application'%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+      
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    
+
+    <script src="https://use.fontawesome.com/fc6d352727.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,500,500i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <style type="text/css">
+   	 a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav{
+	height: 70px;
+	padding: 3px;
+}
+
+
+  .navbackground{
+     background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+-moz-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+  }
+
+
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #c20c4d;
+  font-weight: 300;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+	transition: color .5s ease-in-out;
+  color: #fdbd1e;
+  font-weight: 300;
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+ 	transition: color .5s ease-in-out;
+  color: #fdbd1e;
+  font-weight: 300;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #fdbd1e;
+  font-weight: 300;
+ }
+
+ .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ffffff;
+  border-radius: 0rem;
+  -webkit-box-shadow: 0px 1px 3px 2px rgba(0,0,0,0.09);
+-moz-box-shadow: 0px 1px 3px 2px rgba(0,0,0,0.09);
+box-shadow: 0px 1px 3px 2px rgba(0,0,0,0.09);
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+ color: #010b48;
+  font-weight: 300;
+  font-family: 'Exo 2', sans-serif;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #f5b822;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #f5b822;
+}
+
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: #f5b822;
+  background-color: transparent;
+}
+
+.foothead {
+	color: white;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.searchmebtn {
+	color: #c20c4d;
+	border: 1px solid #c20c4d;
+}
+
+.searchmebtn:hover {
+	color: #ffffff;
+	border: 1px solid #c20c4d;
+	background-color: #c20c4d;
+}
+
+.searchmebtn:active {
+	color: #ffffff;
+	border: 1px solid #c20c4d;
+	background-color: #c20c4d;
+}
+
+   </style>
+ 
+
+  	<nav class="navbar navbar-light navbar-expand-lg fixed-top navbackground">
+      <div class="container">
+        <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1530378288/onlinestoregracedlifeweb_utpspa.png" style="height: 100%; margin:3px; width: 70px; height: 70px;">
+          <span style="position:relative; top: 0px; color: #c20c4d;">The Graced Life Shop</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/aboutus">Explore</a>
+            </li>
+        
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" style="width: 400px;" type="search" placeholder="Search for our books, sermons, apparels" aria-label="Search">
+              <button class="btn btn-outline-success searchmebtn my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+            
+          </ul>
+           <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_in">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_up">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!"><span><i class="fa fa-user" style="margin-left: 5px;" aria-hidden="true"></i></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+
+<footer class="py-5" style="background-color: #c20c4d;">
+      <div class="container">
+        <div class="row">
+        
+        <div class="col-lg-6">
+          <div class="innerfooter">
+            <h5 class="foothead">What we do</h5>
+            <ul style="list-style:none; padding-left:0;">
+            <li><a href="/vision" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">
+            Vision</a></li>
+            <li><a href="/mission" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">
+            Mission</a></li>
+            <li><a href="/partners" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">
+            Partners</a></li>
+            <li><a href="/categories/1" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">
+            Food and Beverages</a></li>
+            <li><a href="/categories/2" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">
+            Books and publications</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="innerfooter">
+            <h5 class="foothead">About Us</h5>
+            <ul style="list-style:none; padding-left:0;">
+            <li><a href="/" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">Home</a></li>
+            <li><a href="/aboutus" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;font-family: 'Exo 2', sans-serif;">About us</a></li> 
+            <% if signed_in? %>
+            <li><%= link_to "Admin Sign Out", destroy_user_session_path, :method => :delete, :style => "color: white; font-weight: 300; font-size: 14px; text-decoration:none;" %></li>
+             <li><a href="/mydashboard" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Admin Dashboard</a>
+            </li>
+            <% else %>
+            <li><a href="/users/sign_in" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Admin Login</a>
+            </li>
+            <% end %>
+           
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-lg-3">
+          <div class="innerfooter">
+             <h5 class="foothead">Address details</h5>
+             <p style="color: white; font-size: 14px; font-family: 'Exo 2', sans-serif;">
+             	<span><i class="fa fa-envelope" aria-hidden="true"></i> Mailing Address</span><br>
+             	<span style="font-weight: 300; font-size: 12px;">P.O.BOX AN 8511.</span><br>
+             	<span style="font-weight: 300; font-size: 12px;">AN, ACCRA NORTH, GHANA.</span>
+             </p>
+             <p style="color: white; font-size: 14px; font-family: 'Exo 2', sans-serif;">
+             	<span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Location</span><br>
+             	<span style="font-weight: 300; font-size: 12px;">East Legon, Accra.</span><br>
+             	<span style="font-weight: 300; font-size: 12px;">Beside bawlaeshie Melcom.</span>
+             </p>
+             <p style="color: white; font-size: 14px; font-family: 'Exo 2', sans-serif;">
+             	<span><i class="fa fa-phone" aria-hidden="true"></i> Phone: +233(0)553393260</span><br>
+             </p>
+             <span><a href="https://www.facebook.com/TGLKingdom/" target="_blank"><i class="fa fa-facebook-official" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href="" target="_blank"><i class="fa fa-twitter-square" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href="" target="_blank"><i class="fa fa-instagram" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+             <span><a href="" target="_blank"><i class="fa fa-google-plus-square" style="color: white; margin-right: 5px;" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+        <!-- <p class="m-0 text-center text-white" style="font-family: 'Exo 2', sans-serif;">Copyright &copy; The Graced Life Partners, 2018</p> -->
+      </div>
+    </div>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+ 
+
+    <script type="text/javascript">
+      
+      $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+
+    </script>
+
+ 
+
+</html>

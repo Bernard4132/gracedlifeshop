@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<h1>Customer Details</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @request.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @request.phonenumber %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @request.paymentmethod %>
+</p>
+
+<p>
+  <strong>Deliverydet:</strong>
+  <%= @request.deliverydet %>
+</p>
+
+<p>
+  <strong>Poster:</strong>
+  <%= @request.poster_id %>
+</p>
+
+<h2>Product Details</h2>
+<p>
+  <span><strong>Product Name: </strong>  <%= @request.poster.title %></span><br>
+  <span><strong>Product Description: </strong>  <%= @request.poster.description %></span><br>
+  <span><strong>Product Price: </strong>  <%= @request.poster.price %></span>
+</p>
+
+<p><a href="" class="btn btn-lg btn-success">Fulfill Request</a></p>
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

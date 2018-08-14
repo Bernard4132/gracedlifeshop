@@ -1,0 +1,130 @@
+
+
+
+
+<style type="text/css">
+
+  .aboutwistech {
+  } 
+
+  .divederlined {
+    height: 1.5px;
+    background-color: #010b48; 
+  }
+
+  .divederlineder {
+    height: 1.5px;
+    background-color: #ffffff; 
+  }
+
+  .aduins{
+ background:linear-gradient(0deg,rgba(0, 0, 0,0.3),rgba(0, 0, 0,0.3)),url(<%= @category.categoryimage %>);
+  background-position:center;
+  min-height: 350px;
+  padding: 50px;
+}
+
+.aduinsh1 {
+      text-align: center; 
+      color: white; 
+      position: relative; 
+      top: 60px; 
+      font-weight: 900;  
+      text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5); 
+      font-family: 'Rubik', sans-serif; 
+      font-size: 50px; 
+      line-height: 60px;
+    }
+
+.aduinsp1 {
+  text-align: center; 
+  color: white; 
+  position: relative; 
+  top: 55px;
+}
+
+.picshold{
+	  padding-top: 30px;
+	  padding-bottom: 50px;
+	}
+
+	.prophold{
+	  background-color: #ffffff;
+	  border-radius: 5px;
+	  padding: 20px;
+	  margin-bottom: 20px;
+	  border: 1px solid #ccc9c9;
+	}
+
+	.dividerline {
+		background-color: #ffffff;
+		height: 2px;
+	}
+
+	.dividerlined {
+		background-color: #c20c4d;
+		height: 2px;
+	}
+
+.js-reveal {
+  opacity: 1;
+  transition: opacity .7s ease-in, margin-top .7s ease-out;
+}
+
+.js-reveal--hidden {
+  opacity: 0;
+  margin-top: 3em;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.aduinsh1 {
+      text-align: center; 
+      color: white; 
+      position: relative; 
+      top: 0px; 
+      font-weight: 900;  
+      text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5); 
+      font-family: 'Rubik', sans-serif; 
+      font-size: 50px; 
+      line-height: 60px;
+    }
+
+.aduinsp1 {
+  text-align: center; 
+  color: white; 
+  position: relative; 
+  top: 10px;
+}
+
+
+}
+
+</style>
+
+<section class="aduins">
+      <div class="container">
+        <div class="row" style="margin-top: 70px">
+          <div class="col-lg-12">
+            <h1 style="font-family: 'Exo 2', sans-serif;" class="aduinsh1">
+              <%= @category.title %>
+            </h1>
+            <p style="" class="aduinsp1">
+              <%= @category.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="py-5 aboutwistech">
+      <div class="container">
+        <div class ="row">
+          
+	<%= render @postercats %>
+
+        </div>
+      </div>
+    </section>
+
+

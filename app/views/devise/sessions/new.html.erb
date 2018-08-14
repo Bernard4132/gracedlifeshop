@@ -1,0 +1,59 @@
+<style type="text/css">
+  .orderbtn{
+    background-color: #c20c4d;
+    border: 1px solid #c20c4d;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  .orderbtn:hover{
+    background-color: #c20c4d;
+    border: 1px solid #c20c4d;
+    border-radius: 0px;
+    color: #fff;
+  }
+
+  .orderbtn:active{
+    background-color: #c20c4d;
+    border: 1px solid #c20c4d;
+    border-radius: 0px;
+    color: #fff;
+  }
+</style>
+
+<div class="container">
+<div class="row justify-content-center" style="margin-top: 100px; margin-bottom: 40px;">
+  <div class="col-md-6 col-md-offset-3">
+<div class="holdformsi">
+<h2 style="text-align: center; font-family: 'Poppins', sans-serif; color: #c20c4d;">Customer Login</h2>
+<br>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Enter email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Enter password"  %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="form-group">
+    <p style="text-align: right;"><%= f.submit "Log in", :class => "btn btn-primary orderbtn" %></p>
+  </div>
+<% end %>
+
+
+</div>
+</div>
+</div>
+
+</div>

@@ -1,0 +1,43 @@
+<%= form_for(poster) do |f| %>
+  <% if poster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poster.errors.count, "error") %> prohibited this poster from being saved:</h2>
+
+      <ul>
+      <% poster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form-group">
+    <label>Select category:</label><br>
+   <%= f.collection_select :category_ids, Category.all, :id, :title, {prompt: "Select Category"}, 
+    {:required => true, class: "select", style: "50%"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :posterimage %>
+    <%= f.file_field :posterimage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
