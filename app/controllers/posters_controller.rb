@@ -11,6 +11,7 @@ class PostersController < ApplicationController
   # GET /posters/1
   # GET /posters/1.json
   def show
+    @request = Request.new
   end
 
   # GET /posters/new
