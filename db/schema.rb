@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180817050342) do
+ActiveRecord::Schema.define(version: 20180820050814) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.text     "about"
+    t.string   "authorimg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "title"
@@ -21,6 +29,13 @@ ActiveRecord::Schema.define(version: 20180817050342) do
     t.string   "categoryicon"
   end
 
+  create_table "posterauthors", force: :cascade do |t|
+    t.integer  "poster_id"
+    t.integer  "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posters", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -28,6 +43,7 @@ ActiveRecord::Schema.define(version: 20180817050342) do
     t.integer  "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "author_id"
   end
 
   create_table "requests", force: :cascade do |t|
