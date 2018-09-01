@@ -68,21 +68,11 @@
         </p>
         <p style="text-align: right;  margin-top: 0px;">
           <a class="btn btn-success seemebtn" href="/posters/<%= poster.id %>">Read More</a>
-          <a class="btn btn-warning orderbtn" data-toggle="modal" href="#bookTourModal_<%= poster.id %>">Buy Now</a>
+          <a class="btn btn-warning orderbtn" data-toggle="modal" href="#bookTourModal_<%= poster.id %>">Place Order</a>
         </p>
       </div>
     </div>
 
-<!--  <tr>
-        <td><%= poster.title %></td>
-        <td><%= poster.description %></td>
-        <td><%= poster.posterimage %></td>
-        <td><%= poster.price %></td>
-        <td><a class="btn btn-warning" data-toggle="modal" href="#bookTourModal_<%= poster.id %>">Request for Fabric</a></td>
-        <td><%= link_to 'Show', poster %></td>
-        <td><%= link_to 'Edit', edit_poster_path(poster) %></td>
-        <td><%= link_to 'Destroy', poster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr> -->
 
  <div class="modal fade" id="bookTourModal_<%= poster.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
